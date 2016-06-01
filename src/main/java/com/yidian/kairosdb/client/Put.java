@@ -4,7 +4,7 @@ package com.yidian.kairosdb.client;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
+
 
 /**
  * @author weijian
@@ -89,5 +89,10 @@ public final class Put {
 
     public String cmdString(){
         return writeTo(new StringBuilder()).toString();
+    }
+
+    @Override
+    public String toString() {
+        return cmdString();
     }
 }
